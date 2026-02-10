@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Faijan 🎉</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('faijan.jpg') center/cover no-repeat;
+    color:white;
+    text-align:center;
+}
+
+/* Animated glow card */
+.card{
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    padding:40px 25px;
+    border-radius:30px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.6);
+    width:90%;
+    max-width:400px;
+    z-index:5;
+}
+
+/* Glowing Name */
+.glow{
+    font-size:28px;
+    font-weight:bold;
+    animation:glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff,
+                    0 0 20px orange,
+                    0 0 30px red;
+    }
+    to{
+        text-shadow:0 0 20px #fff,
+                    0 0 40px orange,
+                    0 0 60px red;
+    }
+}
+
+/* Circular Photo */
+.photo{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    margin:20px auto;
+    background:url('faijan.jpg') center/cover no-repeat;
+    border:4px solid white;
+    box-shadow:0 0 30px orange;
+}
+
+button{
+    padding:14px 30px;
+    margin-top:20px;
+    font-size:18px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:white;
+    color:#dd2476;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{transform:scale(1.1);}
